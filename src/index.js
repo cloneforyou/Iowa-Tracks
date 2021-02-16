@@ -67,7 +67,7 @@ function getWidth() {
     );
 }
 
-fetch('https://github.com/karsonkevin2/swimming-pools/pools.json').then(res=> {
+fetch('./pools.json').then(res=> {
     return res.json();
 }).then((topo)=>{
     const data = topojson.feature(topo, topo.objects.export);
