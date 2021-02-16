@@ -70,7 +70,7 @@ function getWidth() {
 fetch('https://github.com/karsonkevin2/swimming-pools/pools.json').then(res=> {
     return res.json();
 }).then((topo)=>{
-    const data = topojson.feature(topo, topo.objects.pools);
+    const data = topojson.feature(topo, topo.objects.export);
     draw(data,tree);
     let resizeTimer;
     window.addEventListener('resize', function() {
