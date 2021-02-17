@@ -38,6 +38,7 @@
       (h = { x: (h.x - i.xMin) * M + e, y: (i.yMax - h.y) * M + n }),
         0 === d ? (t.beginPath(), t.moveTo(h.x, h.y)) : t.lineTo(h.x, h.y);
     }
+    //t.fillStyle = e.properties.colour;
     t.fill();
   }
   function o(e, t) {
