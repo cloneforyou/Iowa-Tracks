@@ -26,8 +26,8 @@
             t
           );
         })(a),
-        r = 40 / Math.abs(i.xMax - i.xMin),
-        x = 40 / Math.abs(i.yMax - i.yMin),
+        r = 200 / Math.abs(i.xMax - i.xMin),
+        x = 200 / Math.abs(i.yMax - i.yMin),
         M = (r < x ? r : x) - 0.1,
         c = a.geometry.coordinates[0],
         d = 0;
@@ -62,9 +62,9 @@
         document.documentElement.offsetWidth,
         document.documentElement.clientWidth
       ),
-      M = Math.floor(x / 40);
-    (e.height = 40 * Math.ceil(((i / M) * 40 - 1) / 40)),
-      (e.width = 40 * Math.ceil((x - 1) / 40) - 40);
+      M = Math.floor(x / 200);
+    (e.height = 200 * Math.ceil(((i / M) * 200 - 1) / 200)),
+      (e.width = 200 * Math.ceil((x - 1) / 200) - 200);
     for (var c = 0, d = 0, h = [], y = 0; y < i; y++) {
       var l = n.features[y];
       a(c, d, l);
@@ -73,10 +73,10 @@
         featureId: l.id,
         minX: c,
         minY: d,
-        maxX: c + 40,
-        maxY: d + 40,
+        maxX: c + 200,
+        maxY: d + 200,
       };
-      (c += 40) % e.width == 0 && ((c = 0), (d += 40)), h.push(u);
+      (c += 200) % e.width == 0 && ((c = 0), (d += 200)), h.push(u);
     }
     o.load(h),
       e.removeEventListener("click", r),
