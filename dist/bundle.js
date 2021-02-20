@@ -39,9 +39,9 @@
         0 === d ? (t.beginPath(), t.moveTo(h.x, h.y)) : t.lineTo(h.x, h.y);
     }
     
-    if (e.properties.surface == tartan) {
-      t.fillstyle = a.properties.colour;
-    } else if (a.properties.surface == asphalt || a.properties.surface == concrete) {
+    if (a.surface == tartan) {
+      t.fillstyle = a.colour;
+    } else if (a.surface == asphalt || a.surface == concrete) {
       t.fillstyle = grey;
     } else {
       t.fillstyle = brown;
