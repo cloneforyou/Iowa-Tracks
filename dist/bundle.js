@@ -3,7 +3,15 @@
     t = e.getContext("2d"),
     n = new rbush();
   function a(e, n, a) {
-    t.fillStyle = "#74d4de";
+    //t.fillStyle = "#74d4de";
+    if (a.surface == "tartan") {
+      t.fillstyle = a.colour;
+    } else if (a.surface == "asphalt" || a.surface == "concrete") {
+      t.fillstyle = "grey";
+    } else {
+      t.fillstyle = "brown";
+    }
+    
     for (
       var i = (function (e) {
           for (
@@ -39,13 +47,6 @@
         0 === d ? (t.beginPath(), t.moveTo(h.x, h.y)) : t.lineTo(h.x, h.y);
     }
     
-    if (a.surface == "tartan") {
-      t.fillstyle = a.colour;
-    } else if (a.surface == "asphalt" || a.surface == "concrete") {
-      t.fillstyle = "grey";
-    } else {
-      t.fillstyle = "brown";
-    }
     t.fill();
   }
   function o(e, t) {
