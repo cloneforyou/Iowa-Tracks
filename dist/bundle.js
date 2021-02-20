@@ -3,15 +3,16 @@
     t = e.getContext("2d"),
     n = new rbush();
   function a(e, n, a) {
-    t.fillStyle = "red";
+    //t.fillStyle = "red";
     /*if (a.properties.surface == "tartan") {
       t.fillstyle = a.properties.colour;
-    } else if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
+    } else */
+      if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
       t.fillstyle = "grey";
     } else {
       t.fillstyle = "brown";
     }
-    console.log(t.fillstyle);*/
+    console.log(t.fillstyle);
     
     for (
       var i = (function (e) {
