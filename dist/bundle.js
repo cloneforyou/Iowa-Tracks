@@ -4,15 +4,15 @@
     n = new rbush();
   function a(e, n, a) {
     //t.fillStyle = "#74d4de";
-    if (a.surface == "tartan") {
-      t.fillstyle = a.colour;
-      alert("colour + " + a.colour);
-    } else if (a.surface == "asphalt" || a.surface == "concrete") {
+    if (a.properties.surface == "tartan") {
+      t.fillstyle = a.properties.colour;
+      //alert("colour + " + a.properties.colour);
+    } else if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
       t.fillstyle = "grey";
-      alert("surface +  " + a.surface)
+      //alert("surface +  " + a.properties.surface)
     } else {
       t.fillstyle = "brown";
-      alert("else + " + a.surface + a.properties.surface + a.properties["surface"])
+      //alert("else + " + a.surface + a.properties.surface + a.properties["surface"])
     }
     
     for (
