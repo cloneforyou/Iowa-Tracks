@@ -2,23 +2,22 @@
   var e = document.body.querySelector("canvas"),
     t = e.getContext("2d"),
     n = new rbush();
-  function a(e, n, a, outer) {
+  function a(e, n, a) {
     //t.fillStyle = "red";
-    if (Boolean(outer)) {
-      if (a.properties.surface == "tartan") {
-        t.fillStyle = a.properties.colour;
-        if (t.fillStyle == "purple") {
-          t.fillStyle = "RebeccaPurple";
-        }
-      } else if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
-        t.fillStyle = "grey";
-      } else {
-        t.fillStyle = "NavajoWhite";
+    if (a.properties.surface == "tartan") {
+      t.fillStyle = a.properties.colour;
+      if (t.fillStyle == "purple") {
+        t.fillStyle = "RebeccaPurple";
       }
+    } else if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
+      t.fillStyle = "grey";
     } else {
-      t.fillStyle = "white";
+      t.fillStyle = "NavajoWhite";
     }
+
     console.log(t.fillstyle);
+    console.log(a.geometry.coordinates.length);
+    console.log(a.geometry.coordinates[0].length);
     
     for (
       var i = (function (e) {
@@ -81,9 +80,12 @@
       M = Math.floor(x / 200);
     (e.height = 200 * Math.ceil(((i / M) * 200 - 1) / 200)),
       (e.width = 200 * Math.ceil((x - 1) / 200) - 200);
+    
+    console.log("Features: " + i);
+    
     for (var c = 0, d = 0, h = [], y = 0; y < i; y++) {
       var l = n.features[y];
-      a(c, d, l, 1 + y%2);
+      a(c, d, l);
       var u = {
         //featureId: "way/" + l.properties.id,
         featureId: l.id,
