@@ -4,13 +4,12 @@
     n = new rbush();
   function a(e, n, a) {
     //t.fillStyle = "red";
-    /*if (a.properties.surface == "tartan") {
-      t.fillstyle = a.properties.colour;
-    } else */
-      if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
-      t.fillstyle = "grey";
+    if (a.properties.surface == "tartan") {
+      t.fillStyle = a.properties.colour;
+    } else if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
+      t.fillStyle = "grey";
     } else {
-      t.fillstyle = "brown";
+      t.fillStyle = "brown";
     }
     console.log(t.fillstyle);
     
@@ -48,15 +47,7 @@
       (h = { x: (h.x - i.xMin) * M + e, y: (i.yMax - h.y) * M + n }),
         0 === d ? (t.beginPath(), t.moveTo(h.x, h.y)) : t.lineTo(h.x, h.y);
     }
-    
-    /*if (a.properties.surface == "tartan") {
-      t.fillstyle = a.properties.colour;
-    } else if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
-      t.fillstyle = "grey";
-    } else {
-      t.fillstyle = "brown";
-    }
-    console.log(t.fillstyle);*/
+
     t.fill();
   }
   function o(e, t) {
