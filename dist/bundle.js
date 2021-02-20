@@ -14,8 +14,7 @@
       t.fillstyle = "brown";
       //alert("else + " + a.surface + a.properties.surface + a.properties["surface"])
     }
-    
-    alert(t.fillstyle);
+    console.log(t.fillstyle);
     
     for (
       var i = (function (e) {
@@ -52,6 +51,14 @@
         0 === d ? (t.beginPath(), t.moveTo(h.x, h.y)) : t.lineTo(h.x, h.y);
     }
     
+    if (a.properties.surface == "tartan") {
+      t.fillstyle = a.properties.colour;
+    } else if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
+      t.fillstyle = "grey";
+    } else {
+      t.fillstyle = "brown";
+    }
+    console.log(t.fillstyle);
     t.fill();
   }
   function o(e, t) {
