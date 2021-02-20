@@ -6,6 +6,9 @@
     //t.fillStyle = "red";
     if (a.properties.surface == "tartan") {
       t.fillStyle = a.properties.colour;
+      if (t.fillStyle == "purple") {
+        t.fillStyle = "RebeccaPurple";
+      }
     } else if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
       t.fillStyle = "grey";
     } else {
