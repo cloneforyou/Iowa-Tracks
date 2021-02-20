@@ -6,10 +6,13 @@
     //t.fillStyle = "#74d4de";
     if (a.surface == "tartan") {
       t.fillstyle = a.colour;
+      alert(a.colour);
     } else if (a.surface == "asphalt" || a.surface == "concrete") {
       t.fillstyle = "grey";
+      alert(a.surface)
     } else {
       t.fillstyle = "brown";
+      alert(a.surface)
     }
     
     for (
