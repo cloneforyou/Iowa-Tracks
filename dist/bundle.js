@@ -15,6 +15,8 @@
       //alert("else + " + a.surface + a.properties.surface + a.properties["surface"])
     }
     
+    alert(t.fillstyle);
+    
     for (
       var i = (function (e) {
           for (
