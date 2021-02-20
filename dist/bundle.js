@@ -39,12 +39,12 @@
         0 === d ? (t.beginPath(), t.moveTo(h.x, h.y)) : t.lineTo(h.x, h.y);
     }
     
-    if (a.surface == tartan) {
+    if (a.surface == "tartan") {
       t.fillstyle = a.colour;
-    } else if (a.surface == asphalt || a.surface == concrete) {
-      t.fillstyle = grey;
+    } else if (a.surface == "asphalt" || a.surface == "concrete") {
+      t.fillstyle = "grey";
     } else {
-      t.fillstyle = brown;
+      t.fillstyle = "brown";
     }
     t.fill();
   }
