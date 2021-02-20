@@ -15,7 +15,7 @@
       } else {
         t.fillStyle = "NavajoWhite";
       }
-    else {
+    } else {
       t.fillStyle = "white";
     }
     console.log(t.fillstyle);
