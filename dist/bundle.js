@@ -9,7 +9,7 @@
     } else if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
       t.fillStyle = "grey";
     } else {
-      t.fillStyle = "brown";
+      t.fillStyle = "NavajoWhite";
     }
     console.log(t.fillstyle);
     
