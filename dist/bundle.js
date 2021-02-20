@@ -12,7 +12,7 @@
       alert("surface +  " + a.surface)
     } else {
       t.fillstyle = "brown";
-      alert("else + " + a.surface)
+      alert("else + " + a.surface + a.properties.surface + a.properties["surface"])
     }
     
     for (
