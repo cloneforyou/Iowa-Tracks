@@ -111,6 +111,25 @@
     );
   }
   
+  function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
+  
   function i(n, o) {
     o.clear(), t.clearRect(0, 0, e.width, e.height);
     var i = n.features.length,
@@ -127,8 +146,14 @@
     
     console.log("Features: " + i);
     
+    var myArray = []
+    for (let iii = 0; iii < i; iii++) {
+      myArray.push(iii)
+    }
+    myArray = shuffle(myArray);
+    
     for (var c = 0, d = 0, h = [], y = 0; y < i; y++) {
-      var l = n.features[y];
+      var l = n.features[myArray[y]];
       a(c, d, l);
       var u = {
         //featureId: "way/" + l.properties.id,
