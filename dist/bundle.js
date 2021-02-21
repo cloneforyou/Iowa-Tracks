@@ -15,7 +15,8 @@
       t.fillStyle = "NavajoWhite";
     }
 
-    console.log(t.fillstyle);
+    console.log(t.fillStyle);
+    console.log(a.properties.name);
     console.log(a.geometry.coordinates.length);
     console.log(a.geometry.coordinates[0].length);
     console.log(a.geometry.coordinates[1].length);
