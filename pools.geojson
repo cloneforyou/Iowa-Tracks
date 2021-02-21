@@ -2,7 +2,7 @@
   "type": "FeatureCollection",
   "generator": "overpass-ide",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2021-02-20T17:04:03Z",
+  "timestamp": "2021-02-21T15:07:12Z",
   "features": [
     {
       "type": "Feature",
@@ -22549,6 +22549,7 @@
         "leisure": "track",
         "name": "Dallas-Center Grimes High School Track",
         "sport": "athletics",
+        "surface": "tartan",
         "type": "multipolygon"
       },
       "geometry": {
