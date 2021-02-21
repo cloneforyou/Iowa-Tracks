@@ -12,7 +12,7 @@
         t.fillStyle = "Blue";
       }
     } else if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
-      t.fillStyle = "grey";
+      t.fillStyle = "Gainsboro";
     } else {
       t.fillStyle = "NavajoWhite";
     }
