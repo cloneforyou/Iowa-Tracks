@@ -8,6 +8,8 @@
       t.fillStyle = a.properties.colour;
       if (t.fillStyle == "purple") {
         t.fillStyle = "RebeccaPurple";
+      } else if (t.fillStyle == "navy") {
+        t.fillStyle = "Blue";
       }
     } else if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
       t.fillStyle = "grey";
