@@ -18,6 +18,7 @@
     console.log(t.fillstyle);
     console.log(a.geometry.coordinates.length);
     console.log(a.geometry.coordinates[0].length);
+    console.log(a.geometry.coordinates[1].length);
     
     for (
       var i = (function (e) {
@@ -53,9 +54,48 @@
       (h = { x: (h.x - i.xMin) * M + e, y: (i.yMax - h.y) * M + n }),
         0 === d ? (t.beginPath(), t.moveTo(h.x, h.y)) : t.lineTo(h.x, h.y);
     }
-
+    t.fill();
+    
+///////
+    t.fillStyle = "white";
+    for (
+      var i = (function (e) {
+          for (
+            var t = {}, n = e.geometry.coordinates[1], a = 0;
+            a < n.length;
+            a++
+          ) {
+            var i = n[a][0],
+              r = n[a][1];
+            (t.xMin = t.xMin < i ? t.xMin : i),
+              (t.xMax = t.xMax > i ? t.xMax : i),
+              (t.yMin = t.yMin < r ? t.yMin : r),
+              (t.yMax = t.yMax > r ? t.yMax : r);
+          }
+          return (
+            (t.xMin = o(t.xMin, t.yMin).x),
+            (t.yMin = o(t.xMin, t.yMin).y),
+            (t.xMax = o(t.xMax, t.yMax).x),
+            (t.yMax = o(t.xMax, t.yMax).y),
+            t
+          );
+        })(a),
+        r = 200 / Math.abs(i.xMax - i.xMin),
+        x = 200 / Math.abs(i.yMax - i.yMin),
+        M = (r < x ? r : x) - 0.1,
+        c = a.geometry.coordinates[0],
+        d = 0;
+      d < c.length;
+      d++
+    ) {
+      var h = o(c[d][0], c[d][1]);
+      (h = { x: (h.x - i.xMin) * M + e, y: (i.yMax - h.y) * M + n }),
+        0 === d ? (t.beginPath(), t.moveTo(h.x, h.y)) : t.lineTo(h.x, h.y);
+    }
+    //////
     t.fill();
   }
+  
   function o(e, t) {
     var n = 85.0511287798,
       a = Math.PI / 180,
@@ -67,6 +107,7 @@
       o
     );
   }
+  
   function i(n, o) {
     o.clear(), t.clearRect(0, 0, e.width, e.height);
     var i = n.features.length,
