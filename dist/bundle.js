@@ -26,7 +26,7 @@
     for (
       var i = (function (e) {
           for (
-            var t = {}, n = e.geometry.coordinates[0], a = 0;
+            var t = {}, n = e.geometry.coordinates[0].concat(e.geometry.coordinates[1]), a = 0;
             a < n.length;
             a++
           ) {
@@ -64,7 +64,7 @@
     for (
       var i = (function (e) {
           for (
-            var t = {}, n = e.geometry.coordinates[1], a = 0;
+            var t = {}, n = e.geometry.coordinates[0].concat(e.geometry.coordinates[1]), a = 0;
             a < n.length;
             a++
           ) {
@@ -86,7 +86,7 @@
         r = 200 / Math.abs(i.xMax - i.xMin),
         x = 200 / Math.abs(i.yMax - i.yMin),
         M = (r < x ? r : x) - 0.1,
-        c = a.geometry.coordinates[0],
+        c = a.geometry.coordinates[1],
         d = 0;
       d < c.length;
       d++
