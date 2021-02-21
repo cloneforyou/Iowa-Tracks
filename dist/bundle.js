@@ -5,11 +5,12 @@
   function a(e, n, a) {
     //t.fillStyle = "red";
     if (a.properties.surface == "tartan") {
-      t.fillStyle = a.properties.colour;
-      if (t.fillStyle == "purple") {
+      if (a.properties.colour == "purple") {
         t.fillStyle = "RebeccaPurple";
-      } else if (t.fillStyle == "navy") {
+      } else if (a.properties.colour == "navy") {
         t.fillStyle = "Blue";
+      } else {
+        t.fillStyle = a.properties.colour;
       }
     } else if (a.properties.surface == "asphalt" || a.properties.surface == "concrete") {
       t.fillStyle = "Gainsboro";
