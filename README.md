@@ -1,3 +1,5 @@
+This project visualizes every track in Iowa which has been mapped in OpenStreetMap. The vast majority of the tracks were identified and mapped by me using a combination of Overpass queries and the Strava Heatmap. View the data at https://karsonkevin2.github.io/Iowa-Tracks/
+
 # How to load custom data
 
 1. Add data to [OpenStreetMap](https://www.openstreetmap.org)
